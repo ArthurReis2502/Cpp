@@ -1,0 +1,45 @@
+#include<iostream>
+#include<string>
+#include<set>
+using namespace std;
+int main(){
+    set<string> str1;
+    string auxiliar;
+    cout << "Insira as primeiras strings ! " << endl;
+    while(getline(cin,auxiliar)){
+        str1.insert(auxiliar);
+        if(auxiliar=="sair")
+        break;
+    }
+    set<string>::iterator it1;
+    cout << "O primeiro set eh : " << endl;
+    for(it1=str1.begin();it1!=str1.end();it1++){
+        cout << *it1 << endl;
+    }
+
+    cout << "Agora vamos para o segundo !" << endl;
+    set<string> str2;
+    while(getline(cin,auxiliar)){
+        str2.insert(auxiliar);
+        if(auxiliar=="sair")
+        break;
+    }
+    cout << "Aqui temos o segundo set ! " << endl;
+    for(it1=str2.begin();it1!=str2.end();it1++){
+        cout << *it1 << endl;
+    }
+
+    cout << endl << endl << "agora vamos trocar ! " << endl;
+    str1.swap(str2);
+
+    cout << "str1 : " << endl;
+    for(it1=str1.begin();it1!=str1.end();it1++){
+        cout << *it1 << endl;
+    }
+    cout << endl << endl << "str2 : " << endl;
+    for(it1=str2.begin();it1!=str2.end();it1++){
+        cout << *it1 << endl;
+    }
+
+
+}

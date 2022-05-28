@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+#include<list>
+using namespace std;
+int main(){
+list<int> n;
+int numero;
+while(cin >> numero){
+    n.push_front(numero);
+    if(numero==0)
+    break;
+}
+cout << "Agora vamos imprimir o numero antes da função remove!" << endl;
+list<int> n2;
+while(!n.empty()){
+    cout << n.front() << endl;
+    n2.push_front(n.front());
+    //cout << " O numero eh " << n2.front() << endl;
+    n.pop_front();
+}
+
+cout << "Imprimindo sem os repetidos ! " << endl;
+n2.remove(1);
+while(!n2.empty()){
+    cout << n2.front() << endl;
+    n2.pop_front();
+}
+
+
+
+
+
+
+    return 0;
+}

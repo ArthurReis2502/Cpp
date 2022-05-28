@@ -1,0 +1,26 @@
+//Operando listas com strings
+#include<iostream>
+#include<string>
+#include<list>
+using namespace std;
+int main(){
+list<string> str;
+string str2;
+list<string>::iterator it;
+it=str.begin();
+cout << "Digite aqui as frases" << endl;
+while(getline(cin,str2)){
+    str.resize(str.size()+1);
+    str.insert(it,str2);
+    if(str2=="sair")
+    break;
+}
+str.sort();
+cout << "Agora vamos imprimir " << endl;
+while(!str.empty()){
+    cout << str.front() << endl;
+    str.pop_front();
+}
+
+    return 0;
+}

@@ -1,0 +1,23 @@
+//Agora vamos brincar com listas!
+#include<iostream>
+#include<string>
+#include<list>
+using namespace std;
+int main(){
+list<int> lista;
+int n;
+cout << "Aqui voce vai digitar os numeros. " << "Caso digite 0, vai sair do programa! "<< endl;
+while(cin >> n){
+    lista.push_front(n);
+    if(n==0)
+    break;
+}
+lista.sort();
+//lista.reverse(); =======> Para fazer o inverso, basta tirar o comentario
+//O reverse vai inverter a lista, para achar em ordem decrescente, basta fazer um sort antes e depois um reverse!!!!
+while(!lista.empty()){
+    cout << lista.front() << endl;
+    lista.pop_front();
+}
+    return 0;
+}
